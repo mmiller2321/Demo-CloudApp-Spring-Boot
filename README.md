@@ -10,9 +10,9 @@ This is a simple Java Spring Boot project where the user is able to login and vi
 - Google Cloud --> https://cst323-testapp-14.uc.r.appspot.com/
 
 ## Deployment Video Links
-- Local Deployment --> https://www.loom.com/share/8850d922ed66418ab65e0ef6e8d2a2d5
-- Heroku & Azure Cloud --> https://www.loom.com/share/ed11328c34684ef3b221a8f9703747d2
-- AWS & Google Cloud --> 
+- Local Deployment https://www.loom.com/share/8850d922ed66418ab65e0ef6e8d2a2d5
+- Heroku & Azure Cloud https://www.loom.com/share/ed11328c34684ef3b221a8f9703747d2
+- AWS & Google Cloud  
 
 ## Project Versions
 - Version 1.0.0 - Azure Deployment
