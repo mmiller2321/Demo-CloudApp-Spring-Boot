@@ -81,25 +81,20 @@ This is a simple Java Spring Boot project where the user is able to login and vi
 1. Create an Amazon Web Services (AWS) account.
 2. In the search bar (up top) search for “Elastic Beanstalk” and click it.
 3. Click the orange 'Create Application' button on the Elastic Beanstalk page
-    a. Give the application a unique app name.
-    b. Set the platform to 'Java' and platform branch of 'Corretto 11 running on 64bit Amazon Linux 2'.
-    c. Under the 'Application code' section select “sample application”.
-    d. Next, click 'configure more options' button
-    e. Scroll down to the 'Database' section and click edit
-         I. Under 'database settings' set engine to 'mysql', engine version to your MySQL version your using locally. 
-        II. Set instance class to db.t2.micro and set storage to 5 GB.
-       III. Create a database username & password for the new database.
-        IV. Set availability to ‘low’.
-         V. Click the save database button.
-    f.  Click 'create app' button at the bottom of the page. The creation of the application & environment will take 2-7 minutes to initialize.
+    - Give the application a unique app name.
+    - Set the platform to 'Java' and platform branch of 'Corretto 11 running on 64bit Amazon Linux 2'.
+    - Under the 'Application code' section select “sample application”.
+    - Next, click 'configure more options' button
+    - Scroll down to the 'Database' section and click edit
+        - Under 'database settings' set engine to 'mysql', engine version to your MySQL version your using locally. 
+        - Set instance class to db.t2.micro and set storage to 5 GB.
+        - Create a database username & password for the new database.
+        - Set availability to ‘low’.
+        - Click the save database button.
+    - Click 'create app' button at the bottom of the page. The creation of the application & environment will take 2-7 minutes to initialize.
 4. Your new environment for your application (project) page should appear and have a green health checkmark.
 5. In the Elastic Beanstalk menu on the left under the environment for your app called '[app name]-env' click on the configuration link. Scroll down to the database section and click the edit button. Click & open up the endpoint link which will redirect you to the ‘RDS Management Console’. Click on the newly created database (DB identifier).
-    a. 
-    b. 
-    c. 
-    d. 
-    e. 
-
+    - 
 
 ## Google Cloud Deployment Instructions (Java Spring Boot)
 
