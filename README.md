@@ -91,7 +91,7 @@ This is a simple Java Spring Boot project where the user is able to login and vi
     - Update the database configurations within the Spring Boot project but navigating to the application.properties file and replacing the local database connection with the AWS configuration. <p align="center"><img src="https://user-images.githubusercontent.com/40038829/153730967-d0ff28fa-1451-4aa4-a4bd-261e0fa3d1f3.png" width=55% height=55%></p>
     - Configure your project to Java 11 and execute a Maven build to create a JAR application.
         - NOTE: In AWS Elastic Beanstalk uses the root path of “/” when executing health checks. If a home page isn’t defined then the application will fail the health check and show a severe error in the dashboard. Two solutions is to have a page for “/” or the endpoint in the controller can be changed to use a different path instead.
-6. In the Elastic Beanstalk menu, go down to your environment and click on configuration. Scroll down to environment properties and add the following variable then click the apply button. <p align="center"><img src="https://user-images.githubusercontent.com/40038829/153731043-0aa472ef-7f16-4921-aa81-39b9fc33d78e.png" width=55% height=55%></p>
+6. In the Elastic Beanstalk menu, go down to your environment and click on configuration. Scroll down to environment properties and add the following variable then click the apply button.
     - Name: SERVER_PORT
     - Value: 5000
 8. In the Elastic Beanstalk menu, click the [APP NAME]-env link under environments. Click the ‘upload & deploy’ button. Upload the Jar file (with updated AWS configurations from step 5e). Click deploy and wait for the changes to take place.
