@@ -106,18 +106,20 @@ This is a simple Java Spring Boot project where the user is able to login and vi
 </p>
     - DELETE THIS LINE LATER (EXAMPLE)
     - Create a connection to the AWS database by using MySQL Workbench using the database configurations (endpoint/hostname, username, password, port) from the RDS Management Console. Once successfully connected to the AWS database in MySQL Workbench run the DDL script to initialize the database. If your project is running locally you can export the DDL Scripts in SQL that can be imported as DDL scripts in workbench.
-    -  ```Update the database configurations within the Spring Boot project but navigating to the application.properties file and replacing the local database connection with the AWS configuration. 
-
-# For AWS Connection
-spring.datasource.url=jdbc:mysql://[YOUR DATABASE ENDPOINT]:3306/[DATABASE TABLE NAME]
-spring.datasource.username=[DATABASE USERNAME]
-spring.datasource.password=[DATABASE PASSWORD]
-spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
-```
-
-    -  Configure your project to Java 11 and execute a Maven build to create a JAR application.
-
-
+    - Update the database configurations within the Spring Boot project but navigating to the application.properties file and replacing the local database connection with the AWS configuration. 
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/40038829/153730967-d0ff28fa-1451-4aa4-a4bd-261e0fa3d1f3.png" width=55% height=55%>
+</p>
+    - Configure your project to Java 11 and execute a Maven build to create a JAR application.
+        - NOTE: In AWS Elastic Beanstalk uses the root path of “/” when executing health checks. If a home page isn’t defined then the application will fail the health check and show a severe error in the dashboard. Two solutions is to have a page for “/” or the endpoint in the controller can be changed to use a different path instead.
+6. In the Elastic Beanstalk menu, go down to your environment and click on configuration. Scroll down to environment properties and add the following variable then click the apply button.
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/40038829/153731043-0aa472ef-7f16-4921-aa81-39b9fc33d78e.png" width=55% height=55%>
+</p>
+7. In the Elastic Beanstalk menu, click the [APP NAME]-env link under environments. Click the ‘upload & deploy’ button. Upload the Jar file (with updated AWS configurations from step 5e). Click deploy and wait for the changes to take place.
+8. In the Elastic Beanstalk menu, go down and click “go to environment” link to access your web application.
+    - NOTE: If the database queries are not working properly double check the database table name (upper/lower case) and AWS needs exact table names for proper queries.
+10. Your web application is now accessible in the cloud and connected to a MySQL database.
 
 ## Google Cloud Deployment Instructions (Java Spring Boot)
 
