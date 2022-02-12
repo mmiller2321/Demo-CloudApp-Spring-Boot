@@ -92,8 +92,10 @@ This is a simple Java Spring Boot project where the user is able to login and vi
     - Configure your project to Java 11 and execute a Maven build to create a JAR application.
         - NOTE: In AWS Elastic Beanstalk uses the root path of “/” when executing health checks. If a home page isn’t defined then the application will fail the health check and show a severe error in the dashboard. Two solutions is to have a page for “/” or the endpoint in the controller can be changed to use a different path instead.
 6. In the Elastic Beanstalk menu, go down to your environment and click on configuration. Scroll down to environment properties and add the following variable then click the apply button. <p align="center"><img src="https://user-images.githubusercontent.com/40038829/153731043-0aa472ef-7f16-4921-aa81-39b9fc33d78e.png" width=55% height=55%></p>
-7. In the Elastic Beanstalk menu, click the [APP NAME]-env link under environments. Click the ‘upload & deploy’ button. Upload the Jar file (with updated AWS configurations from step 5e). Click deploy and wait for the changes to take place.
-8. In the Elastic Beanstalk menu, go down and click “go to environment” link to access your web application.
+    - Name: SERVER_PORT
+    - Value: 5000
+8. In the Elastic Beanstalk menu, click the [APP NAME]-env link under environments. Click the ‘upload & deploy’ button. Upload the Jar file (with updated AWS configurations from step 5e). Click deploy and wait for the changes to take place.
+9. In the Elastic Beanstalk menu, go down and click “go to environment” link to access your web application.
     - NOTE: If the database queries are not working properly double check the database table name (upper/lower case) and AWS needs exact table names for proper queries.
 10. Your web application is now accessible in the cloud and connected to a MySQL database.
 
