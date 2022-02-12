@@ -30,22 +30,16 @@ This is a simple Java Spring Boot project where the user is able to login and vi
 6. On the left menu scroll down to MySQL in app, enable the database, click save and run the app again (restart app). Go back to MySQL in app an click the manage app to display the phpMyAdmin Client page. Create a new database and import the DDL scripts from the local database via a CSV file.
 7. To get the DB credentials to configure your new app go to advanced tools and go to the debug console then click on CMD. Navigate to …\data\mysql directory and type in “Type MYSQLCONNSTR_localdb.txt” to view the Azure DB connection information. Save the DB connection info of the hostname, data source, user ID and password to a external text file for future reference. 
 8. Update the JDBC string in the application.properties by switching to the new DB connection details found in the previous step. Also, add the parameter “?serverTimezone=UTC” at the end of the url line. Note if using Jasypt Encryptor set a secret named JASYPT_ENCRYPTOR_PASSWORD with your Jasper encryption key as a cloud platform environment variable.
-<p align="center">
-  <img src="https://user-images.githubusercontent.com/40038829/151684800-a6a7105b-e5d8-4d0b-bdb9-ef52020c3943.png" width=55% height=55%>
-</p>
+<p align="center"><img src="https://user-images.githubusercontent.com/40038829/151684800-a6a7105b-e5d8-4d0b-bdb9-ef52020c3943.png" width=55% height=55%></p>
 9. In the Java Spring Boot project go to the POM.xml file to update to Java 11 and set the Jar file name as app. Then double check that check skip tests is checked in the Maven configuration settings and then execute a maven build. 
 <p align="center">
   <img src="https://user-images.githubusercontent.com/40038829/151684818-7fdc9869-6b29-4322-af3c-df9be19aea65.png" width=50% height=50%>
   <img src="https://user-images.githubusercontent.com/40038829/151684823-ea10e1c7-e52a-4d98-89a4-62e59aa7050c.png" width=40% height=40%>
 </p>
 10. Create a new file named web.config exactly as shown below.
-<p align="center">
-  <img src="https://user-images.githubusercontent.com/40038829/151684850-6304b7db-4b3b-45b7-9fa1-3c60c8a3ca5c.png" width=75% height=95%>
-</p>
+<p align="center"><img src="https://user-images.githubusercontent.com/40038829/151684850-6304b7db-4b3b-45b7-9fa1-3c60c8a3ca5c.png" width=75% height=95%></p>
 11. In Azure go to Advanced Tools, click the debug console, select CMD and navigate to …/site/wwwroot directory. Delete all existing content from this directory. Create a new folder on the desktop for the Azure deployment files. In this new folder copy/paste the new web.config file along with the app.jar file in the main projects target directory. Once the web.config file and the app.jar are in the new folder select those two files by right clicking send to zip and call it whatever you want. Next drag this newly zipped file (incuding web.config & app.jar) drag it over to the …/wwwroot directory on the right side under where it says size. The file will then unzip automatically and the app.jar and web.config will be successfully in the new app.
-<p align="center">
-  <img src="https://user-images.githubusercontent.com/40038829/151684870-6530582f-525d-41c4-8d1e-45b6b76d199e.png" width=55% height=55%>
-</p>
+<p align="center"><img src="https://user-images.githubusercontent.com/40038829/151684870-6530582f-525d-41c4-8d1e-45b6b76d199e.png" width=55% height=55%></p>
 12.  Go back to the overview page in Azure and restart the app. You may need to also stop the app for a few minutes and start again.
 13.  After 2-4 minutes click on the URL app link on the Azure overview page and test that the app is loading. If you receive a 500 error just wait a few more minutes and your page should show up shortly, then refresh the page. (If it takes longer then 5-6 minutes then click stop, wait a few seconds and click start).
 
@@ -66,15 +60,11 @@ This is a simple Java Spring Boot project where the user is able to login and vi
 8. Connect the new JawsDB to MySQL Workbench. Click the JawsDB Add-on in Heroku and you will be able to view the database credentials to be added to MySQL Workbench. Export the DDL Scripts from MAMP for your local database to a CSV file format. Then go to the MySQL Workbench connection that was just created and click the new database that has 10 random characters. Click it, then click the import wizard to import the CSV file that was saved. 
 9. Double check your MySQL JDBC driver in your POM.xml file is the same as the JawsDB MySQL one in Heroku. If not switch to the Jaws version. 
 10. Update the Database connections for Spring Boot in the application.properties file.
-<p align="center">
-  <img src="https://user-images.githubusercontent.com/40038829/151600756-566efab2-529d-4ac0-9f23-451cac201402.png" width=65% height=65%>
-</p>
+<p align="center"><img src="https://user-images.githubusercontent.com/40038829/151600756-566efab2-529d-4ac0-9f23-451cac201402.png" width=65% height=65%></p>
 11. If using Jasypt Encryptor add a secret named JASYPT_ENCRYPTOR_PASSWORD with your security key as a new Heroku environment variable. You can add it by going to Heroku project settings, reveal config vars, and then add the new variable.
 12. Click Deploy branch on the projects deploy page.
 13. Once deployed the app should be accessible by clicking open app but if it fails you can add run the following commands using the Heroku CLI.
-<p align="center">
-  <img src="https://user-images.githubusercontent.com/40038829/151601006-444244ee-8ea3-4521-9fad-80f398fa2910.png" width=45% height=45%>
-</p>
+<p align="center"><img src="https://user-images.githubusercontent.com/40038829/151601006-444244ee-8ea3-4521-9fad-80f398fa2910.png" width=45% height=45%></p>
 
 ## AWS Cloud Deployment Instructions (Java Spring Boot)
 
@@ -99,15 +89,11 @@ This is a simple Java Spring Boot project where the user is able to login and vi
     - IMPORTANT: Scroll down to ‘Security group rules’ section and click on the ‘EC2 Security Group - Inbound’ group. Next, scroll down and click ‘Inbound rules’. Click the ‘Edit inbound rules’ button, then click the ‘add rule’ button. Set type to ‘all TCP’, source to ‘Anywhere-IPv4’ set to 0.0.0./0, then click the save rule button. <p align="center"><img src="https://user-images.githubusercontent.com/40038829/153730682-f7eea475-4967-4570-ba28-942c5501fa8c.png" width=55% height=55%></p><p align="center"><img src="https://user-images.githubusercontent.com/40038829/153730687-6ae40243-ae03-4eb4-8aa1-867e003524a7.png" width=55% height=55%></p>
     - Create a connection to the AWS database by using MySQL Workbench using the database configurations (endpoint/hostname, username, password, port) from the RDS Management Console. Once successfully connected to the AWS database in MySQL Workbench run the DDL script to initialize the database. If your project is running locally you can export the DDL Scripts in SQL that can be imported as DDL scripts in workbench.
     - Update the database configurations within the Spring Boot project but navigating to the application.properties file and replacing the local database connection with the AWS configuration. 
-<p align="center">
-  <img src="https://user-images.githubusercontent.com/40038829/153730967-d0ff28fa-1451-4aa4-a4bd-261e0fa3d1f3.png" width=55% height=55%>
-</p>
+<p align="center"><img src="https://user-images.githubusercontent.com/40038829/153730967-d0ff28fa-1451-4aa4-a4bd-261e0fa3d1f3.png" width=55% height=55%></p>
     - Configure your project to Java 11 and execute a Maven build to create a JAR application.
         - NOTE: In AWS Elastic Beanstalk uses the root path of “/” when executing health checks. If a home page isn’t defined then the application will fail the health check and show a severe error in the dashboard. Two solutions is to have a page for “/” or the endpoint in the controller can be changed to use a different path instead.
 6. In the Elastic Beanstalk menu, go down to your environment and click on configuration. Scroll down to environment properties and add the following variable then click the apply button.
-<p align="center">
-  <img src="https://user-images.githubusercontent.com/40038829/153731043-0aa472ef-7f16-4921-aa81-39b9fc33d78e.png" width=55% height=55%>
-</p>
+<p align="center"><img src="https://user-images.githubusercontent.com/40038829/153731043-0aa472ef-7f16-4921-aa81-39b9fc33d78e.png" width=55% height=55%></p>
 7. In the Elastic Beanstalk menu, click the [APP NAME]-env link under environments. Click the ‘upload & deploy’ button. Upload the Jar file (with updated AWS configurations from step 5e). Click deploy and wait for the changes to take place.
 8. In the Elastic Beanstalk menu, go down and click “go to environment” link to access your web application.
     - NOTE: If the database queries are not working properly double check the database table name (upper/lower case) and AWS needs exact table names for proper queries.
