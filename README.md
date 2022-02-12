@@ -98,7 +98,12 @@ This is a simple Java Spring Boot project where the user is able to login and vi
     - IMPORTANT: Take note of the Endpoint (hostname), port number, location (avaiability zone), database username/password, and the database name on the connectivity & security section.
     - IMPORTANT: Scroll down to ‘Security group rules’ section and click on the ‘EC2 Security Group - Inbound’ group. Next, scroll down and click ‘Inbound rules’. Click the ‘Edit inbound rules’ button, then click the ‘add rule’ button.
         - Set type to ‘all TCP’, source to ‘Anywhere-IPv4’ set to 0.0.0./0, then click the save rule button. 
-    - TWO SCREENSHOTS GO HERE
+    - <p align="center">
+  <img src="https://user-images.githubusercontent.com/40038829/153730682-f7eea475-4967-4570-ba28-942c5501fa8c.png" width=55% height=55%>
+</p>
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/40038829/153730687-6ae40243-ae03-4eb4-8aa1-867e003524a7.png" width=55% height=55%>
+</p>
     - Create a connection to the AWS database by using MySQL Workbench using the database configurations (endpoint/hostname, username, password, port) from the RDS Management Console. Once successfully connected to the AWS database in MySQL Workbench run the DDL script to initialize the database. If your project is running locally you can export the DDL Scripts in SQL that can be imported as DDL scripts in workbench.
     - Update the database configurations within the Spring Boot project but navigating to the application.properties file and replacing the local database connection with the AWS configuration. 
 <p align="center">
