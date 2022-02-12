@@ -104,16 +104,17 @@ This is a simple Java Spring Boot project where the user is able to login and vi
 <p align="center">
   <img src="https://user-images.githubusercontent.com/40038829/153730687-6ae40243-ae03-4eb4-8aa1-867e003524a7.png" width=55% height=55%>
 </p>
+    - DELETE THIS LINE LATER (EXAMPLE)
     - Create a connection to the AWS database by using MySQL Workbench using the database configurations (endpoint/hostname, username, password, port) from the RDS Management Console. Once successfully connected to the AWS database in MySQL Workbench run the DDL script to initialize the database. If your project is running locally you can export the DDL Scripts in SQL that can be imported as DDL scripts in workbench.
-    -  Update the database configurations within the Spring Boot project but navigating to the application.properties file and replacing the local database connection with the AWS configuration. 
+    -  ```Update the database configurations within the Spring Boot project but navigating to the application.properties file and replacing the local database connection with the AWS configuration. 
 
-```bash
 # For AWS Connection
 spring.datasource.url=jdbc:mysql://[YOUR DATABASE ENDPOINT]:3306/[DATABASE TABLE NAME]
 spring.datasource.username=[DATABASE USERNAME]
 spring.datasource.password=[DATABASE PASSWORD]
 spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
 ```
+
     -  Configure your project to Java 11 and execute a Maven build to create a JAR application.
 
 
