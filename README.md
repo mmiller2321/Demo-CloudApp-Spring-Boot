@@ -98,7 +98,7 @@ This is a simple Java Spring Boot project where the user is able to login and vi
     - IMPORTANT: Take note of the Endpoint (hostname), port number, location (avaiability zone), database username/password, and the database name on the connectivity & security section.
     - IMPORTANT: Scroll down to ‘Security group rules’ section and click on the ‘EC2 Security Group - Inbound’ group. Next, scroll down and click ‘Inbound rules’. Click the ‘Edit inbound rules’ button, then click the ‘add rule’ button.
         - Set type to ‘all TCP’, source to ‘Anywhere-IPv4’ set to 0.0.0./0, then click the save rule button. 
-    - <p align="center">
+<p align="center">
   <img src="https://user-images.githubusercontent.com/40038829/153730682-f7eea475-4967-4570-ba28-942c5501fa8c.png" width=55% height=55%>
 </p>
 <p align="center">
