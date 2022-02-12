@@ -42,6 +42,7 @@ This is a simple Java Spring Boot project where the user is able to login and vi
 <p align="center"><img src="https://user-images.githubusercontent.com/40038829/151684870-6530582f-525d-41c4-8d1e-45b6b76d199e.png" width=55% height=55%></p>
 12.  Go back to the overview page in Azure and restart the app. You may need to also stop the app for a few minutes and start again.
 13.  After 2-4 minutes click on the URL app link on the Azure overview page and test that the app is loading. If you receive a 500 error just wait a few more minutes and your page should show up shortly, then refresh the page. (If it takes longer then 5-6 minutes then click stop, wait a few seconds and click start).
+14.  Your web application is now accessible in the cloud and connected to a MySQL database.
 
 ## Heroku Cloud Deployment Instructions (Java Spring Boot)
 
