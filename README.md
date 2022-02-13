@@ -11,10 +11,8 @@
 - AWS Cloud --> http://cloudapp-env.eba-rc3u9bab.us-east-1.elasticbeanstalk.com
 - Google Cloud --> https://cst323-testapp-14.uc.r.appspot.com/
 
-## Deployment Video Links
-- Local Deployment https://www.loom.com/share/8850d922ed66418ab65e0ef6e8d2a2d5
-- Heroku & Azure Cloud https://www.loom.com/share/ed11328c34684ef3b221a8f9703747d2
-- AWS & Google Cloud https://www.loom.com/share/b1b8e5a4f83d474e9e6c5a7e5f57e795
+## Deployment Video Links of all Cloud Platforms (Updated in the near future)
+- Demo Video: 
 
 ## Project Versions
 - Version 1.0.0 - Azure Deployment
