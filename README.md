@@ -11,7 +11,7 @@
 - AWS Cloud --> http://cloudapp-env.eba-rc3u9bab.us-east-1.elasticbeanstalk.com
 - Google Cloud --> https://cst323-testapp-14.uc.r.appspot.com/
 
-## Deployment Video Links of all Cloud Platforms (Updated in the near future)
+## Deployment Video of all Cloud Platforms (Updated in the near future)
 - Demo Video: 
 
 ## Project Versions
