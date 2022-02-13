@@ -105,29 +105,29 @@
 1. Create Google Cloud account.
     - NOTE: Google Cloud Platform requires a credit card and you are given a $300 credit over a 90 day period. Your card will not be charged as long as you follow the following steps and only make a micro database. I recommend deleting your Google Cloud account once you are done with your project to prevent getting charged in the future.
 2. Create a new App Engine project and application on Google Cloud by following the steps below:
-   - To the left of the search bar click where it says “my first project” and select create “new project”.
-   - Give your project a Name then click create.
-   - Once the App Engine welcome screen appears click “create application”.
+   - To the left of the search bar click where it says `my first project` and select create `new project`.
+   - Give your project a `Name` then click `create`.
+   - Once the App Engine welcome screen appears click `create application`.
    - Select a Region close to your location in the US and click next. This should take a few minutes to create the new app. 
 3. Create a new MySQL Database using the steps below:
-   - In the top left click the 3 bars for the google cloud menu and click SQL.
+   - In the top left click the 3 bars for the google cloud menu and click `SQL`.
    - Click the create instance button to create a cloud database.
-   - Choose the MySQL option.  If you are prompted click enable API for the Compute Engine API.
-   - Fill out the instance info for your new cloud database by entering a instance ID (database name), root password, desired database version for MySQL that matches the local MySQL version or close to it. Select single zone for zonal availability.
-   - Click ‘show configuration options’ to change advanced database settings. 
+   - Choose the MySQL option.  If you are prompted click `enable API` for the Compute Engine API.
+   - Fill out the instance info for your new cloud database by entering a instance ID (database name), root password, desired database version for MySQL that matches the local MySQL version or close to it. Select `single zone` for zonal availability.
+   - Click `show configuration options` to change advanced database settings. 
         - Select machine type and set to lightweight for 1 vCPU, 3.75 GB. 
         - Set storage to 20 GB.
         - Make sure Public IP is checked under connections.
         - Click create database instance.
    -  Take note of your Public IP Address for the instance that was just created.
-   -  From the left menu select the users option, click add new user account. Give the instance (database) a username/password [DB_USERNAME]/[DB_PASSWORD] and set host name to allow any host. Click the add button to create a new instance account.
+   -  From the left menu select the users option, click `add new user` account. Give the instance (database) a username/password [DB_USERNAME]/[DB_PASSWORD] and set host name to allow `any host`. Click the `add` button to create a new instance account.
    - Next, select the databases option on the left pane and create a new database (your schema). Give your database a name then click create.
-   - To find your public IP address go to a new tab in the web browser and search `my IP`. Take not of your IPv4 Address for the next step.
-   - Next, select the connections option on the left pane and under Authorization Networks click `add network`. Set name to GCU, network to your Public IP address (from previous step), click the done and save button.
+   - To find your public IP address go to a new tab in the web browser and search `my IP`. Take note of your IPv4 Address for the next step.
+   - Next, select the connections option on the left pane and under `Authorization Networks` click `add network`. Set name to GCU, network to your Public IP address (from previous step), click the `done` and `save` button.
    - The database updates and changes can take a few minutes to be fully implemented.
    - Next, setup a MySQL Workbench database connection to the Google Cloud instance that was just created using the database IP address listed and your database credentials that were given when you created a new user.
    - Connect to the database in MySQL Workbench and run your DDL scripts. 
-   - In the top left click the 3 bars for the main Google Cloud menu and click APIs & Services, then click library option. While on the API Library page search for `Google Cloud SQL`and `Cloud SQL Admin API`, and make sure they are both enabled.
+   - In the top left click the 3 bars for the main Google Cloud menu and click `APIs & Services`, then click `library` option. While on the API Library page search for `Google Cloud SQL`and `Cloud SQL Admin API`, and make sure they are both enabled.
 4. Before we deploy our Spring Boot test app we need to configure, build, test then we will be able to deploy.
    - In the top left next to the notification/info button click the Cloud Shell and activate it.
         - Run the following command in the Cloud Shell to clone the Github repository for the test app.
