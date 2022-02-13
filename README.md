@@ -103,7 +103,55 @@
 ## Google Cloud Deployment Instructions (Java Spring Boot)
 
 1. Create Google Cloud account.
-2. 
+    - NOTE: Google Cloud Platform requires a credit card and you are given a $300 credit over a 90 day period. Your card will not be charged as long as you follow the following steps and only make a micro database. I recommend deleting your Google Cloud account once you are done with your project to prevent getting charged in the future.
+2. Create a new App Engine project and application on Google Cloud by following the steps below:
+   - To the left of the search bar click where it says “my first project” and select create “new project”.
+   - Give your project a Name then click create.
+   - Once the App Engine welcome screen appears click “create application”.
+   - Select a Region close to your location in the US and click next. This should take a few minutes to create the new app. 
+3. Create a new MySQL Database using the steps below:
+   - In the top left click the 3 bars for the google cloud menu and click SQL.
+   - Click the create instance button to create a cloud database.
+   - Choose the MySQL option.  If you are prompted click enable API for the Compute Engine API.
+   - Fill out the instance info for your new cloud database by entering a instance ID (database name), root password, desired database version for MySQL that matches the local MySQL version or close to it. Select single zone for zonal availability.
+   - Click ‘show configuration options’ to change advanced database settings. 
+        - Select machine type and set to lightweight for 1 vCPU, 3.75 GB. 
+        - Set storage to 20 GB.
+        - Make sure Public IP is checked under connections.
+        - Click create database instance.
+   -  Take note of your Public IP Address for the instance that was just created.
+   -  From the left menu select the users option, click add new user account. Give the instance (database) a username/password [DB_USERNAME]/[DB_PASSWORD] and set host name to allow any host. Click the add button to create a new instance account.
+   - Next, select the databases option on the left pane and create a new database (your schema). Give your database a name then click create.
+   - To find your public IP address go to a new tab in the web browser and search `my IP`. Take not of your IPv4 Address for the next step.
+   - Next, select the connections option on the left pane and under Authorization Networks click `add network`. Set name to GCU, network to your Public IP address (from previous step), click the done and save button.
+   - The database updates and changes can take a few minutes to be fully implemented.
+   - Next, setup a MySQL Workbench database connection to the Google Cloud instance that was just created using the database IP address listed and your database credentials that were given when you created a new user.
+   - Connect to the database in MySQL Workbench and run your DDL scripts. 
+   - In the top left click the 3 bars for the main Google Cloud menu and click APIs & Services, then click library option. While on the API Library page search for `Google Cloud SQL`and `Cloud SQL Admin API`, and make sure they are both enabled.
+4. Before we deploy our Spring Boot test app we need to configure, build, test then we will be able to deploy.
+   - In the top left next to the notification/info button click the Cloud Shell and activate it.
+        - Run the following command in the Cloud Shell to clone the Github repository for the test app.
+        - NOTE: Double check the JRE System Library is set to Java 11 before cloning the project.
+        - git clone [URL to your Test App Repository]
+        - NOTE: If not public set it to public for the clone to take place and then you can make the repo private again.
+   - Click on `open editor` to update the following changes in the application.
+        - Set Maven to build using Java 11. <p align="center"><img src="https://user-images.githubusercontent.com/40038829/153740626-e126e30e-fc27-4acf-ba11-baec470430b9.png" width=80% height=80%></p>
+        - Add the following Maven dependencies (should be the last dependencies). Double check that these dependencies haven’t been declared earlier in the pom.xml file. <p align="center"><img src="https://user-images.githubusercontent.com/40038829/153740653-caaa653d-2bbd-4e35-a5a5-4a65d6d822b6.png" width=80% height=80%></p>
+        - At the bottom of the pom.xml add the following Maven build plugin after the spring framework plugin. <p align="center"><img src="https://user-images.githubusercontent.com/40038829/153740669-568b6bdb-856d-43d4-a1c2-d716fd09a96f.png" width=80% height=80%></p>
+        - Create a new directory in your project in the Cloud Shell named `appengine` under src/main. Create a file within src/main/appengine named app.yaml with the exact following entries: <p align="center"><img src="https://user-images.githubusercontent.com/40038829/153740696-7ffbbbc8-1b75-4aab-ae33-d7792bf1f3d9.png" width=80% height=80%></p>
+        - Update the application.properties file with the MySQL Database connection configuration (JDBC Connection string, database username, and database password).
+            - spring.datasource.url=jdbc:mysql://google/[DB_SCHEMA]?socketFactory=com.google.cloud.sql.mysql.SocketFactory&cloudSqlInstance=[PROJECT_ID]:[DB_REGION]:[DB_INSTANCE_NAME] <p align="center"><img src="https://user-images.githubusercontent.com/40038829/153740720-957761ab-6e85-4bdf-a0f8-1be1eea8dbc1.png" width=80% height=80%></p>
+5. Test the configuration changes to the project by navigating to the root of the project then use the following commands.
+   - mvn clean package 
+        - NOTE: May run into duplicate dependencies declared in the pom file or database table name is incorrect. Table names and columns need to match the code in the SQL queries.
+   - cd target
+   - java -jar [JAR NAME]
+   - Make sure that there are no errors on startup or when executing the clean package command. 
+   - To test click the web preview icon in the Shell and use port 8080 to view the cloud project locally before deploying.
+6. Deploy in the cloud shell by navigating back to the root of the project and run the following command:
+   - mvn clean package appengine:deploy
+        - NOTE: This will take about 4-10 minutes to complete. If this fails you make need to wait for Google to finish provisioning storage to upload your build artifact. If the deployment does fail try deployment command multiple time and sometimes the clean package will fix some issues that may be occurring.
+7. Test the web application by going to the target URL in the Cloud Shell terminal to see if you are able to view the website and see if the database is connected properly. 
 
 ## User Interface Diagram
 
