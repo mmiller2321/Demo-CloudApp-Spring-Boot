@@ -14,7 +14,7 @@
 ## Deployment Video Links
 - Local Deployment https://www.loom.com/share/8850d922ed66418ab65e0ef6e8d2a2d5
 - Heroku & Azure Cloud https://www.loom.com/share/ed11328c34684ef3b221a8f9703747d2
-- AWS & Google Cloud  
+- AWS & Google Cloud https://www.loom.com/share/b1b8e5a4f83d474e9e6c5a7e5f57e795
 
 ## Project Versions
 - Version 1.0.0 - Azure Deployment
