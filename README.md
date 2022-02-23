@@ -12,7 +12,7 @@
 - Google Cloud --> https://cst323-testapp-14.uc.r.appspot.com/
 
 ## Deployment Video of all Cloud Platforms (Updated in the near future)
-- Demo Video: 
+- Demo Video: Video will be added shortly
 
 ## Project Versions
 - Version 1.0.0 - Azure Deployment
