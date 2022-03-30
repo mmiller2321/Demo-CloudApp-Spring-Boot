@@ -1,15 +1,23 @@
 # Demo-CloudApp-Spring-Boot
 > This is a simple Java Spring Boot project where the user is able to login and view a list of orders that are retrieved from the database. 
-> Live demo [_here_](https://testapptopic4.herokuapp.com/login/).
+> Live demo [_here_](https://testapptopic4.herokuapp.com/login).
 
 
 ## Deployment Links
 - Username & Password = Root
-- Local Deployment --> http://localhost:8080 OR http://localhost:8080/login/
-- Heroku Cloud --> https://testapptopic4.herokuapp.com/login/
-- Azure Cloud --> https://testapptopic4.azurewebsites.net/login/
+- Local Deployment --> http://localhost:8080 OR http://localhost:8080/login
+- Heroku Cloud --> https://testapptopic4.herokuapp.com/login
+- Azure Cloud --> https://testapptopic4.azurewebsites.net/login
 - AWS Cloud --> http://cloudapp-env.eba-rc3u9bab.us-east-1.elasticbeanstalk.com
-- Google Cloud --> https://cst323-testapp-14.uc.r.appspot.com/
+- Google Cloud --> https://cst323-testapp-14.uc.r.appspot.com
+
+## Deployment Links (With Logging)
+- Username & Password = Root
+- Local Deployment --> http://localhost:8080 OR http://localhost:8080/login
+- Heroku Cloud --> 
+- Azure Cloud --> 
+- AWS Cloud --> 
+- Google Cloud --> 
 
 ## Deployment Video of all Cloud Platforms
 - Demo Video: Video will be added shortly
