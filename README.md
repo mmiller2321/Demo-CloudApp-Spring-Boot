@@ -11,7 +11,7 @@
 - AWS Cloud --> http://cloudapp-env.eba-rc3u9bab.us-east-1.elasticbeanstalk.com
 - Google Cloud --> https://cst323-testapp-14.uc.r.appspot.com
 
-## Deployment Links (With Logging)
+## Deployment Links (W/Logging)
 - Username & Password = Root
 - Local Deployment --> http://localhost:8080 OR http://localhost:8080/login
 - Heroku Cloud --> https://testapp-log.herokuapp.com
