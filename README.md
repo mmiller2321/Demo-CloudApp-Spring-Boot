@@ -6,8 +6,8 @@
 ## Deployment Links
 - Username & Password = Root
 - Local Deployment --> http://localhost:8080 OR http://localhost:8080/login
-- Heroku Cloud --> https://testapptopic4.herokuapp.com/login
-- Azure Cloud --> https://testapptopic4.azurewebsites.net/login
+- Heroku Cloud --> https://testapptopic4.herokuapp.com/login/
+- Azure Cloud --> https://testapptopic4.azurewebsites.net/login/
 - AWS Cloud --> http://cloudapp-env.eba-rc3u9bab.us-east-1.elasticbeanstalk.com
 - Google Cloud --> https://cst323-testapp-14.uc.r.appspot.com
 
@@ -19,8 +19,12 @@
 - AWS Cloud --> 
 - Google Cloud --> 
 
-## Deployment Video of all Cloud Platforms
+## Deployment Video of each Cloud
 - Demo Video: Video will be added shortly
+- Heroku Cloud --> https://youtu.be/Id7sQe-8bqQ
+- Azure Cloud --> https://youtu.be/u0ddZE-sIF0
+- AWS Cloud --> https://youtu.be/7_Mtxpzn5KE
+- Google Cloud --> https://youtu.be/Qrk_vMlynRE
 
 ## Project Versions
 - Version 1.0.0 - Azure Deployment
