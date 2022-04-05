@@ -14,8 +14,8 @@
 ## Deployment Links (With Logging)
 - Username & Password = Root
 - Local Deployment --> http://localhost:8080 OR http://localhost:8080/login
-- Heroku Cloud --> 
-- Azure Cloud --> 
+- Heroku Cloud --> https://testapp-log.herokuapp.com
+- Azure Cloud --> https://testapp-log.azurewebsites.net
 - AWS Cloud --> 
 - Google Cloud --> 
 
