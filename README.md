@@ -16,8 +16,6 @@
 - Local Deployment --> http://localhost:8080 OR http://localhost:8080/login
 - Heroku Cloud --> https://testapp-log.herokuapp.com
 - Azure Cloud --> https://testapp-log.azurewebsites.net
-- AWS Cloud --> 
-- Google Cloud --> 
 
 ## Deployment Video of each Cloud
 - Demo Video: Video will be added shortly
